@@ -41,17 +41,6 @@ tabsWrapper.addEventListener('click', (e) => {
     }
         }) 
         
-    // function makeTimer(){
-    //     clearInterval(timer) //Очистим интервал, это позволит прервать его работу и отменить перелистывание
-    //     timer = setInterval = () => {
-    //       i++;
-    //       showTabContent(i);
-          
-    //     },5000}
-    
-       
-    
-    
     
     //slider
     const modal = document.querySelector('.modal')
@@ -78,6 +67,7 @@ tabsWrapper.addEventListener('click', (e) => {
     modalCloseBtn.addEventListener('click', handleCloseModal)
     
             const modalImg = document.querySelector('.modalImg')
+            const modalImgCloseBtn = document.querySelector('.modalImg_close')
                  
         const handleOpenModalImg = () => {
             modalImg.classList.add('show')
@@ -95,6 +85,7 @@ tabsWrapper.addEventListener('click', (e) => {
                     handleCloseModalImg(event.target.closest('.modalImg')) 
                 }
              })
+            modalImgCloseBtn.addEventListener('click', handleCloseModalImg)
             // window.onclick = (event) => {
             // if (event.target === modalImg){
             //     modalImg.classList.remove('show')
